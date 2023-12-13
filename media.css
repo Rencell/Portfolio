@@ -1,0 +1,173 @@
+@media screen and (max-width: 600px){
+    body{
+        grid-template-columns: 15% 1fr;
+        
+    }
+    .sidebar{
+    display: flex;
+    justify-content: left;
+    border-radius: 25px;
+    }
+    .sidebar img{
+        border-radius: 50%;
+        width: 35px;
+        
+    }
+    .sidebar .navigation{
+        width: 10px;
+        margin-left: 10px;
+        position: absolute;
+        text-align: left;
+    }
+    .sidebar .navigation .name{
+        font-size: 15px;
+        opacity: 0;
+    }
+
+    .sidebar a{
+        width: 0px;
+        font-size: 20px;
+       
+    }
+    .sidebar .navigation ul li > a, 
+    .navigation ul li i, 
+    .navigation ul li span{
+        
+        width: 0px;
+    }
+    .sidebar span{
+        width: 0px;
+        user-select: none;
+        opacity: 0;
+    }
+    .sidebar ul li i{
+        padding: 5px;
+    }
+    .main{
+        
+        overflow-x: hidden;
+    }
+    .main .main-container{
+        
+    grid-template-columns: 1fr;
+    
+    grid-template-areas: 
+    "type" 
+    "box1"
+     "box2" 
+     "box3";
+    }
+
+    .welcome{
+        margin-bottom: 10px;
+    }
+
+    .main-container .welcome .welcome2 p:nth-child(1){
+        font-size: 2em
+    }
+    
+    .box.skillcon{
+        text-align: center;
+    }
+    .box.skillcon .box-janice.skill  > img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .main{
+
+    }
+    .about-container{
+        overflow-x: hidden;
+        box-sizing: none;
+        width: auto;
+    }
+    .about-container .about-content.about{
+        
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        gap: 10px;
+        grid-template-areas: 
+        "pic"
+        "about-me";
+        grid: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .about-container .about-content.about > img{
+        margin-top: 40px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        grid-area: pic;
+    }
+    .about-container .about-content .about-me{
+        margin-top: -50px;
+        width:200px;
+        
+        grid-area: about-me;
+    }
+    .about-container .about-content .about-me h1{
+        font-size:1em;
+    }
+    .about-container .about-content .about-me p{
+        font-size:10px;
+    }
+
+    .about-container .about-content.about .skillset{
+
+    }
+    .about-container .about-content.about .skillset > img{
+        width: 20px;
+        height: 20px;
+    }
+    .about-container .about-content .resume{
+        display: grid;
+    }
+
+    
+
+    /* Education */
+    .about-container .about-content .resume .education{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .about-container .about-content .resume .education .education-box > p{
+        font-size: 0.7em;
+    }
+    /* Work */
+    .about-container .about-content .resume .work{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .about-container .about-content .resume .work .work-content p{
+        font-size: 0.7em;
+        
+    
+    }
+
+    /*Project Container*/
+    .project-container{
+        width: auto;
+    }
+    .project-container .all-projects{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 400px;
+        
+        gap: 20px;
+    }
+    .project-container .project-box .content-project > img{
+        transform: translateX(-70px);
+        position: absolute;
+        width: 400px;
+        height: 300px;
+      object-fit: cover;
+        
+      border-radius: 20px;
+    }
+}
