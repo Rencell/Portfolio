@@ -35,6 +35,7 @@ body{
     grid-template-columns: 25% 1fr;
     
     background-color: var(--second-color);
+    
 }
 .sidebar{
     border-radius: 0px 25px 25px 0px;
@@ -103,7 +104,6 @@ body{
     scroll-behavior: smooth;
     overflow: auto;
     box-sizing: border-box;
-    padding: 0% 5% 0% 5%;
     height: 100dvh;
     display: none;
     
@@ -121,6 +121,7 @@ body{
 
 .main .main-container{
     
+    padding: 0% 5% 0% 5%;
     padding-top: 60px;
     padding-bottom: 60px;
     grid-template-columns: 1fr 1fr ;
@@ -282,6 +283,8 @@ body{
 
 
 .about-container{
+    
+    padding: 0% 5% 0% 5%;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     height: 100dvh;
@@ -452,7 +455,8 @@ body{
 /* Project Container */
 
 .project-container{
-    padding-top: 60px;
+    
+    padding: 0% 5% 0% 5%;
     
     width: 75dvw;
     height: 100dvh;
@@ -462,8 +466,8 @@ body{
     margin-top: 60px;
 }
 .project-container .all-projects{
+    margin-bottom: 40px;
     
-    height: 200dvh;
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -472,19 +476,56 @@ body{
     gap: 20px;
 }
 .project-container .all-projects > .project-box{
+    position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     background-color: var(--first-color);
 
-    display: flex;
     justify-content: center;
+    transition: all 0.4s;
+}
+.project-container .all-projects .project-box > .description{
+    padding: 10px;
+    
+}
+.project-container .all-projects .project-box .description > p{
+    margin-bottom: 10px;
+}
+.project-container .all-projects .project-box .description > strong{
+
+    color: var(--third-color);
+}
+.project-container .all-projects > .project-box:nth-child(1){
+
+    animation: fade-up 0.5s;
+}
+.project-container .all-projects > .project-box:nth-child(2){
+
+    animation: fade-up 1s;
+}
+.project-container .all-projects > .project-box:nth-child(3){
+
+    animation: fade-up 1.5s;
+}
+.project-container .all-projects > .project-box:nth-child(4){
+
+    animation: fade-up 2s;
 }
 
+@keyframes fade-up{
+    from{
+        opacity: 0;
+        transform: translateY(30px) scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
 .project-container .project-box > .content-project {
     position: relative;
-    border-radius: 20px;
-    margin: 20px;
-    width: 400px;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
     height: 300px;
     background-color: var(--second-color);
     
@@ -503,20 +544,104 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: font-size 0.3s;
+    transition: all 0.5s;
     
-    transition: opacity 0.5s;
 }
 .project-container .project-box .content-project > p:hover{
+    cursor: pointer;
     opacity: 1;
     transform: translateX(5);
 }
-
+.project-container .project-box:hover{
+  
+    transform: scale(1.05);
+}
 .project-container .project-box .content-project > img{
     position: absolute;
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
   object-fit: cover;
+}
+
+/* Contact Container */
+
+.contact-container{
+    width: 75dvw;
+    padding: 0% 5% 0% 5%;
+    padding-top: 60px;
+}
+/* Contact */
+.main .contact-container .contacts{
+    height: fit-content;
+    width: fit-content;
+}
+.contact-container .contacts-me{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.main .contact-container .contacts .wtf{
+        
+    font-size: 60px;
+}
+.main .contact-container .contacts .contact-info{
+    margin-bottom: 25px;
+    color: var(--third-color);
+    display: flex;
+    align-items: center;
+}
+.main .contact-container .contacts .contact-info.par{
+    margin-top: 50px;
+}
+.main .contact-container .contacts .contact-info > i{
+    font-size: 30px;
     
-  border-radius: 20px;
+    color: var(--third-color);
+}
+.main .contact-container .contacts .contact-info > span{
+    font-size: 20px;
+}
+
+.main .contact-container .contacts .socials a > i{
+    
+    color: var(--third-color);
+    margin-top: 20px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+/* Email */
+.contact-container .contacts-me form{
+    width: fit-content;
+    display: grid;
+    height: fit-content;
+}
+.contact-container .contacts-me form input:nth-child(1){
+    height: 30px;
+
+}
+.contact-container .contacts-me form input:nth-child(2){
+    
+    line-height: 1;
+    padding: 10px;
+    padding-right: 0px;
+    padding-bottom: 100px;
+
+}
+.contact-container .contacts-me form > input{
+    width: 345px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    margin-bottom: 20px;
+}
+.contact-container .contacts-me form > button{
+    background-color: #9b59b6;
+    border-radius: 25px;
+    border: none;
+    padding: 10px;
+    width: 100px;
 }

@@ -29,6 +29,8 @@
         font-size: 20px;
        
     }
+
+  
     .sidebar .navigation ul li > a, 
     .navigation ul li i, 
     .navigation ul li span{
@@ -47,10 +49,13 @@
         
         overflow-x: hidden;
     }
+
+
+    /* Main Container */
     .main .main-container{
         
     grid-template-columns: 1fr;
-    
+    grid-template-rows: 1fr;
     grid-template-areas: 
     "type" 
     "box1"
@@ -148,26 +153,61 @@
         
     
     }
-
+    .main{
+        
+    }
     /*Project Container*/
     .project-container{
-        width: auto;
+        
+        width: 85dvw;
     }
     .project-container .all-projects{
     
         display: grid;
         grid-template-columns: 1fr;
-        grid-auto-rows: 400px;
         
         gap: 20px;
     }
+    .project-container .all-projects > .project-box{
+       
+    }
     .project-container .project-box .content-project > img{
-        transform: translateX(-70px);
-        position: absolute;
-        width: 400px;
-        height: 300px;
-      object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
+    }
+    /*Contact container*/
+    .contact-container{
+        padding-top: 0px;
+        width: 85dvw;
+    }
+    
+    .contact-container .contacts-me{
+        margin-top: 60px;
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+    .main .contact-container .contacts .wtf{
+
+        font-size: 45px;
+    }
+
+    .main .contact-container .contacts .contact-info > i{
+        font-size: 22px;
         
-      border-radius: 20px;
+    }
+    .main .contact-container .contacts .contact-info > span{
+        font-size: 15px;
+    }
+
+    .main .contact-container .contacts .socials a > i{
+    
+        font-size: 25px;
+    }
+    .contact-container .contacts-me form > input{
+        width: 250px;
     }
 }
