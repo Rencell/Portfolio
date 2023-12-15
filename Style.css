@@ -129,7 +129,6 @@ body{
    grid-template-areas: 
    "type box1"
     "box2 box3";
-    grid-auto-rows: 250px;
     gap: 1em;
     
     animation: slide-right 1s ease 0s forwards;
@@ -153,6 +152,13 @@ body{
     "b1 b1"
     "b2 b3";
     gap: 0.5em;
+}
+.main .main-container p, div{
+        
+    font-size: 1.5vw;
+}
+.main-container .welcome > div{
+    font-size: 1.5vw;
 }
 .welcome .welcome2{
     
@@ -182,7 +188,7 @@ body{
 
 
 .main-container .welcome .welcome2 p:nth-child(1){
-    font-size: 40px;
+    font-size: 3vw;
     font-weight: bold;
 }
 .main-container .welcome .welcome2 p:nth-child(2){
@@ -191,7 +197,7 @@ body{
     width: fit-content;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight: bold;
 }
 .welcome .projects{
@@ -250,7 +256,7 @@ body{
     overflow: hidden; 
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     object-fit: cover;
 }
 .box:nth-child(3){
@@ -290,9 +296,13 @@ body{
     height: 100dvh;
     width: 75dvw;
 }
-.about-container > .about-content{
+.about-container > .about-content{  
     scroll-snap-align: start;
     height: 100dvh;
+}
+.about-container > .about-content:nth-child(1){
+    overflow: hidden;  
+    
 }
 .about-container > .about-content:nth-child(1).active *{
     
@@ -329,15 +339,17 @@ body{
 
 .about-container .about-content .about-me h1{
     margin-top: 30px;
+    
+    font-size: 2vw;
 }
 .about-container .about-content .about-me > p{
     
-    font-size: 17px;
+    font-size: 1.2vw;
 }
 .about-container .about-content .about-me{
-    margin-top: 125px;
+    margin-top: 10vw;
     float: left;
-    width: 600px;
+    width: 40vw;
 }
 
 @keyframes slideups{
@@ -359,25 +371,23 @@ body{
     background-color: var(--first-color);
     border-radius: 50%;
     margin-right: 10px;
-    padding: 10px;
-    width: 45px;
-    height: 45px;
+    padding: 1vw;
+    width: 3vw;
     
     animation: fade-up 0.5s;
 }   
 .about-container .about-content > img{
     
     margin-top: 125px;
-    border-radius: 180px;
-    width: 300px;
-    height: 300px;
+    border-radius: 50%;
+    width: 20vw;
     grid-area: img;
     animation: fade-up 0.5s;
 }
 @keyframes fade-up{
     from{
         opacity: 0;
-        transform: translateY(30px) scale(0);
+        transform: translateY(30px) scale(0.7);
     }
     to{
         opacity: 1;
@@ -583,7 +593,7 @@ body{
 }
 .main .contact-container .contacts .wtf{
         
-    font-size: 60px;
+    font-size: 5vw;
 }
 .main .contact-container .contacts .contact-info{
     margin-bottom: 25px;

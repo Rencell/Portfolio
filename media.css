@@ -62,15 +62,25 @@
      "box2" 
      "box3";
     }
-
+    .main .main-container p, div{
+        
+        font-size: 3.5vw;
+    }
     .welcome{
         margin-bottom: 10px;
     }
-
-    .main-container .welcome .welcome2 p:nth-child(1){
-        font-size: 2em
+    .main-container .welcome > div{
+        font-size: 3.5vw;
     }
-    
+    .main-container .welcome div > p{
+        font-size: 10vw;
+    }
+    .main-container .welcome .welcome2 p:nth-child(1){
+        font-size: 9vw;
+    }
+    .main-container .welcome .welcome2 p:nth-child(2){
+        font-size: 6vw;
+    }
     .box.skillcon{
         text-align: center;
     }
@@ -82,10 +92,13 @@
     .main{
 
     }
+
+    /* About Container */
     .about-container{
         overflow-x: hidden;
         box-sizing: none;
         width: auto;
+        width: 85dvw;
     }
     .about-container .about-content.about{
         
@@ -93,7 +106,7 @@
         display: grid;
         grid-template-columns: 1fr;
         
-        gap: 10px;
+        gap: 20px;
         grid-template-areas: 
         "pic"
         "about-me";
@@ -104,8 +117,7 @@
 
     .about-container .about-content.about > img{
         margin-top: 40px;
-        width: 200px;
-        height: 200px;
+        width: 50vw;
         border-radius: 50%;
         grid-area: pic;
     }
@@ -116,18 +128,18 @@
         grid-area: about-me;
     }
     .about-container .about-content .about-me h1{
-        font-size:1em;
+        font-size:1rem;
     }
     .about-container .about-content .about-me p{
-        font-size:10px;
+        font-size:3vw;
     }
 
     .about-container .about-content.about .skillset{
-
+        padding-bottom: 5vh;
     }
     .about-container .about-content.about .skillset > img{
-        width: 20px;
-        height: 20px;
+        width: 7vw;
+        
     }
     .about-container .about-content .resume{
         display: grid;
