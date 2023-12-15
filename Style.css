@@ -292,17 +292,18 @@ body{
 }
 .box.skillcon .box-janice.contact .contactinfo i{
     color: var(--third-color);
-    font-size: 15px;
+    font-size: 1.7vw;
 }
 .box.skillcon .box-janice.contact .contactinfo span{
 
-    font-size: 13px;
+    font-size: 1.3vw;
 }
 
 .box.skillcon .box-janice.contact .contactinfo .socials i{
     margin-top: 20px;
     color: var(--third-color);
     font-size: 25px;
+    margin-right: 20px;
 }
 /* About Container */
 
@@ -582,6 +583,12 @@ body{
     opacity: 1;
     transform: translateX(5);
 }
+
+.project-container .project-box .content-project p:hover a > i{
+    transition: transform 0.5s;
+    
+    transform: scale(1.5);
+}
 .project-container .project-box:hover{
   
     transform: scale(1.05);
@@ -627,6 +634,7 @@ body{
 .main .contact-container .contacts .contact-info > i{
     font-size: 30px;
     
+    margin-right: 20px;
     color: var(--third-color);
 }
 .main .contact-container .contacts .contact-info > span{
