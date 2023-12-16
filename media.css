@@ -4,6 +4,7 @@
         
     }
     .sidebar{
+        
     display: flex;
     justify-content: left;
     border-radius: 25px;
@@ -70,7 +71,7 @@
         margin-bottom: 10px;
     }
     .main-container .welcome > div{
-        font-size: 3.5vw;
+        font-size: 3.45vw;
     }
     .main-container .welcome div > p{
         font-size: 10vw;
@@ -219,14 +220,16 @@
         
     }
     .main .contact-container .contacts .contact-info > span{
-        font-size: 15px;
+        font-size: 4vw;
     }
 
     .main .contact-container .contacts .socials a > i{
     
         font-size: 25px;
     }
-    .contact-container .contacts-me form > input{
+    .contact-container .contacts-me form > input, 
+    .contact-container .contacts-me form > textarea{
         width: 250px;
+        overflow: hidden;
     }
 }

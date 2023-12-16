@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="projects"> <strong>Total Projects</strong> <br> <p>4</p></div>
-                <div class="projects"> <strong>Current Projects</strong><br> <p>2</p></div>
+                <div class="projects"> <strong>Ongoing Projects</strong><br> <p>2</p></div>
             </div>
         </div>
         
@@ -211,7 +211,7 @@
             
             <div class="contacts-me">
                 <div class="contacts">
-                    <strong class="wtf">Contact Me</strong>
+                    <p class="wtf">Contact Me</p>
                     <div class="contact-info par">
                         
                         <i class="fa-solid fa-envelope"></i><span>&nbsp;Rencelltobelonia67@gmail.com</span>
@@ -232,12 +232,17 @@
 
                 <form>
                     <input type="text" id="user" placeholder="Username">
-                    <input type="text" id="message" placeholder="message">
-                    <button>Submit</button>
+                    <input type="text" id="subject" placeholder="Subject">
+                    <textarea name="Message" rows="6" placeholder="Message" id="message"></textarea>
+                    <button id="btn">Submit</button>
                 </form>
             </div>
         </div>
     </main>
 
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    
 </body>
 </html>

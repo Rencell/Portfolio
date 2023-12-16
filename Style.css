@@ -193,7 +193,7 @@ body{
 }
 .main-container .welcome .welcome2 p:nth-child(2){
     
-    background: linear-gradient(90deg,  var(--third-color), #A41151);
+    background: linear-gradient(90deg,  var(--third-color),#a55eea);
     width: fit-content;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -431,6 +431,10 @@ body{
     border-left: 2px solid var(--first-color);
     
 }
+.about-container .about-content .resume .education .education-content p {
+    font-size: 1.2vw;
+    
+}
 .about-container .about-content .resume .education .education-box{
     position: relative;
     padding: 10px;
@@ -460,6 +464,9 @@ body{
 .about-container .about-content .resume .work .work-content{
     border-left: 2px solid var(--first-color);
     
+}
+.about-container .about-content .resume .work .work-content p{
+    font-size: 1.2vw;
 }
 .about-container .about-content .resume .work .work-box{
     position: relative;
@@ -619,8 +626,19 @@ body{
 
 }
 .main .contact-container .contacts .wtf{
-        
+    animation: contact-faderight 0.5s;
     font-size: 5vw;
+}
+@keyframes contact-faderight{
+    from{
+        opacity: 0;
+        
+        transform: translateX(50px);
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .main .contact-container .contacts .contact-info{
     margin-bottom: 25px;
@@ -636,11 +654,23 @@ body{
     
     margin-right: 20px;
     color: var(--third-color);
+    
+    animation: span-fadeup 0.5s;
 }
 .main .contact-container .contacts .contact-info > span{
     font-size: 20px;
+    animation: span-fadeup 0.5s;
 }
-
+@keyframes span-fadeup{
+    from{ 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 .main .contact-container .contacts .socials a > i{
     
     color: var(--third-color);
@@ -648,33 +678,67 @@ body{
     font-size: 30px;
     margin-right: 20px;
 }
+.main .contact-container .contacts .socials a:nth-child(1) > i{
+    
+    animation: icon-faderight 0.5s;
+}
+.main .contact-container .contacts .socials a:nth-child(2) > i{
+    
+    animation: icon-faderight 0.4s;
+}
+.main .contact-container .contacts .socials a:nth-child(3) > i{
+    
+    animation: icon-faderight 0.4s;
+}
+.main .contact-container .contacts .socials a:nth-child(4) > i{
+    
+    animation: icon-faderight 0.2s;
+}
+
+@keyframes icon-faderight{
+    from{ 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
 /* Email */
 .contact-container .contacts-me form{
     width: fit-content;
     display: grid;
     height: fit-content;
+    animation: fade-up 0.5s;
+    margin-top: 50px;
 }
 .contact-container .contacts-me form input:nth-child(1){
     height: 30px;
 
 }
-.contact-container .contacts-me form input:nth-child(2){
-    
-    line-height: 1;
-    padding: 10px;
-    padding-right: 0px;
-    padding-bottom: 100px;
-
-}
 .contact-container .contacts-me form > input{
     width: 345px;
     padding-left: 10px;
+    padding: 10px;
     border-radius: 10px;
     outline: none;
     border: none;
     background-color: var(--first-color);
     margin-bottom: 20px;
+}
+.contact-container .contacts-me form > textarea{
+    width: 345px;
+    padding-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    margin-bottom: 20px;
+    
+  resize: none;
 }
 .contact-container .contacts-me form > button{
     background-color: #9b59b6;

@@ -40,7 +40,7 @@ for(let i = 0 ; i < sidebar.length; i++){
     });
 }
 
-
+//When Snap Scroll it will active the next scroll
 let scroll_div_length = document.querySelectorAll(".about-container > div");
 
 var observer = new IntersectionObserver(function(entries) {
@@ -57,7 +57,7 @@ var observer = new IntersectionObserver(function(entries) {
     observer.observe(section);
 });
 
-
+//Changing Active for Container / Navigation Icon and A
 let box2 = document.querySelector(".box:nth-child(2)");
 
 box2.addEventListener("click",function(){
@@ -73,3 +73,35 @@ box2.addEventListener("click",function(){
 
 });
 
+// Email Sending
+var btn = document.getElementById("btn");
+btn.addEventListener("click",function(e){
+    var user = document.getElementById("user").value;
+    var messages = document.getElementById("message").value;
+    
+    var subject = document.getElementById("subject").value;
+
+    var body = "By: " + user + '<br>' + messages; 
+    e.preventDefault()
+    //email
+    Email.send({
+    SecureToken : "292f8872-8715-45d6-a192-226ec8a1a7a2",
+    To : 'rencelltobelonia67@gmail.com',
+    From : 'rencelltobelonia67@gmail.com',
+    Subject : subject,
+    Body : body
+    
+    }).then(
+    
+    message => alert(message)
+    
+    );
+    //clear fields
+    clear()
+})
+
+function clear(){
+    document.getElementById("user").value = "";
+    document.getElementById("message").value = "";
+    document.getElementById("subject").value = "";
+}
