@@ -628,6 +628,7 @@ body{
 .main .contact-container .contacts .wtf{
     animation: contact-faderight 0.5s;
     font-size: 5vw;
+    font-weight: bold;
 }
 @keyframes contact-faderight{
     from{

@@ -212,7 +212,7 @@
     }
     .main .contact-container .contacts .wtf{
 
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .main .contact-container .contacts .contact-info > i{
@@ -220,7 +220,7 @@
         
     }
     .main .contact-container .contacts .contact-info > span{
-        font-size: 4vw;
+        font-size: 3.8vw;
     }
 
     .main .contact-container .contacts .socials a > i{
@@ -229,7 +229,7 @@
     }
     .contact-container .contacts-me form > input, 
     .contact-container .contacts-me form > textarea{
-        width: 250px;
+        width: 240px;
         overflow: hidden;
     }
 }
